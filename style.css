@@ -1,0 +1,32 @@
+body {
+    font-size: 16px;
+}
+
+nav {
+    background: #ffffff;
+    overflow: hidden;
+    height: 64px !important;
+}
+
+.brand-logo img {
+    max-height: 64px;
+}
+
+.parallax-container {
+    text-shadow: 0 0 8px rgba(0, 0, 0, .25), 0 0 3px rgba(0, 0, 0, .5);
+    height: auto;
+}
+
+.parallax-container > a {
+    color: #ffffff;
+    display: block;
+}
+
+.parallax-container > a:hover {
+    background: rgba(0, 0, 0, .3);
+    text-decoration: underline;
+}
+
+.section img {
+    max-width: 100%;
+}
