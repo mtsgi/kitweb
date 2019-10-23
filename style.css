@@ -2,6 +2,11 @@ body {
     font-size: 16px;
 }
 
+main {
+    transition: .5s all ease;
+    opacity: .3;
+}
+
 nav {
     background: #ffffff;
     overflow: hidden;
@@ -10,6 +15,10 @@ nav {
 
 .brand-logo img {
     max-height: 64px;
+}
+
+.copy {
+    font-family: 'DM Sans', sans-serif;
 }
 
 .parallax-container {
@@ -29,4 +38,10 @@ nav {
 
 .section img {
     max-width: 100%;
+}
+
+.preloader-wrapper {
+    position: fixed;
+    left: calc(50% - 32px);
+    top: calc(50% - 32px);
 }
