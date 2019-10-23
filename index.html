@@ -13,6 +13,7 @@
         integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
     <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap.css">
     <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap-font.css">
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:500&display=swap" rel="stylesheet"> 
     <title>kit公式Webサイト</title>
     <meta name="description" content="kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。">
     <meta name="twitter:card" content="summary">
@@ -31,6 +32,49 @@
 </head>
 
 <body class="center-align">
+    
+    <div class="preloader-wrapper big active">
+        <div class="spinner-layer spinner-blue">
+            <div class="circle-clipper left">
+            <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+            </div><div class="circle-clipper right">
+            <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-red">
+            <div class="circle-clipper left">
+            <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+            </div><div class="circle-clipper right">
+            <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-yellow">
+            <div class="circle-clipper left">
+            <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+            </div><div class="circle-clipper right">
+            <div class="circle"></div>
+            </div>
+        </div>
+
+        <div class="spinner-layer spinner-green">
+            <div class="circle-clipper left">
+            <div class="circle"></div>
+            </div><div class="gap-patch">
+            <div class="circle"></div>
+            </div><div class="circle-clipper right">
+            <div class="circle"></div>
+            </div>
+        </div>
+    </div>
+
     <nav>
         <div class="nav-wrapper">
             <a href="#" class="brand-logo center">
@@ -44,82 +88,84 @@
         </div>
     </nav>
 
-    <div class="parallax-container white-text">
-        <div class="parallax"><img src="11.jpg"></div>
-        <h4 class="emoji p-l kit-font-thin">
-            kit your desktop
-        </h4>
-        <div class="row container p emoji">
-            :desktop: kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。
-        </div>
-        <a href="" class="section waves-effect waves-dark emoji">
-            :package: kitのリリースをダウンロード
-        </a>
-        <a href="" class="section waves-effect waves-dark emoji">
-            :notebook_with_decorative_cover: 開発ブログから最新情報を知る
-        </a>
-        <a href="" class="section waves-effect waves-dark emoji">
-            :gem: Canaryを体験する
-        </a>
-    </div>
-
-    <div class="section white z-depth-4">
-        <div class="row container">
-            <h4 class="header">kitDesktopとは？</h4>
-            <p>
-                kitはWeb技術を使った軽量で使いやすいデスクトップ(ウィンドウシステム)とアプリの開発を非常に簡単にするアプリケーションフレームワークを提供することを目的としたデスクトップ環境です。
-            </p>
-            <p>
-                すべてのkitアプリケーションはHTML構造にJavaScript、それとJavaScriptを用いたkit apps
-                frameworkを用いて記述されていて、呼び出されるとAjaxでロードされます。サーバーサイド技術は用いられていません。
-            </p>
-            <a href="" class="btn-flat waves-effect waves-dark kit-font-l blue-text emoji">
-                :gem: 今すぐkitを体験する
+    <main>
+        <div class="parallax-container white-text">
+            <div class="parallax"><img src="11.jpg"></div>
+            <h4 class="emoji p-l copy">
+                kit your desktop.
+            </h4>
+            <div class="row container p emoji">
+                :desktop: kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。
+            </div>
+            <a href="" class="section waves-effect waves-dark emoji">
+                :package: kitのリリースをダウンロード
+            </a>
+            <a href="" class="section waves-effect waves-dark emoji">
+                :notebook_with_decorative_cover: 開発ブログから最新情報を知る
+            </a>
+            <a href="" class="section waves-effect waves-dark emoji">
+                :gem: Canaryを体験する
             </a>
         </div>
-        <div class="row container kit-text-c p-xl">
-            <img class="materialboxed" data-caption="kitは今までにない軽量デスクトップ環境を提供します。" width="auto" src="https://mtsgi.github.io/kitdocs/images/desktop.png">
-        </div>
-        <div class="row container">
-            <h4 class="header">documentation</h4>
-            <p class="grey-text text-darken-3 lighten-3">
-                kitドキュメントには、すべてのkitユーザーのための情報があります。kitチュートリアルは、kitアプリを開発しない人が読んでも参考になるでしょう。
-            </p>
-            <a href="" class="btn-flat waves-effect waves-dark kit-font-l blue-text emoji">
-                :page_facing_up: kitドキュメントを見る
-            </a>
-        </div>
-    </div>
 
-    <div class="parallax-container white-text">
-        <div class="parallax"><img src="http://web.kitit.ml/bg.jpg"></div>
-
-        <h4 class="emoji p-l kit-font-thin">
-            kit your apps
-        </h4>
-
-        <div class="row container p emoji">
-            <p>
-                :rocket: kitアプリケーションはHTMLと少しのJavaScriptの知識があればすぐに開発することができます。
-            </p>
-            <p>CSSを記述してアプリケーションのスタイルを調整することも可能ですが、kitのスタイルフレームワークであるkitstrapを使用するともっと簡単にアプリケーションのスタイルやレイアウトを組み立てることができます。</p>
-            <p>
-                kitアプリの開発をしやすくする開発者のためのフレームワーク、kit apps frameworkを使用することもできます。kafを使うことで、JavaScriptコーディングの量を劇的に少なく、あるいはまったくなくすことができます。
-            </p>
+        <div class="section white z-depth-4">
+            <div class="row container">
+                <h4 class="headezr copy">About kit</h4>
+                <p>
+                    kitはWeb技術を使った軽量で使いやすいデスクトップ(ウィンドウシステム)とアプリの開発を非常に簡単にするアプリケーションフレームワークを提供することを目的としたデスクトップ環境です。
+                </p>
+                <p>
+                    すべてのkitアプリケーションはHTML構造にJavaScript、それとJavaScriptを用いたkit apps
+                    frameworkを用いて記述されていて、呼び出されるとAjaxでロードされます。サーバーサイド技術は用いられていません。
+                </p>
+                <a href="" class="btn-flat waves-effect waves-dark kit-font-l blue-text emoji">
+                    :gem: 今すぐkitを体験する
+                </a>
+            </div>
+            <div class="row container kit-text-c p-xl">
+                <img class="materialboxed" data-caption="kitは今までにない軽量デスクトップ環境を提供します。" width="auto" src="https://mtsgi.github.io/kitdocs/images/desktop.png">
+            </div>
+            <div class="row container">
+                <h4 class="header copy">documentation</h4>
+                <p class="grey-text text-darken-3 lighten-3">
+                    kitドキュメントには、すべてのkitユーザーのための情報があります。kitチュートリアルは、kitアプリを開発しない人が読んでも参考になるでしょう。
+                </p>
+                <a href="" class="btn-flat waves-effect waves-dark kit-font-l blue-text emoji">
+                    :page_facing_up: kitドキュメントを見る
+                </a>
+            </div>
         </div>
-    </div>
 
-    <div class="section white z-depth-4">
-        <div class="row container">
-            <h4 class="header">kitHub</h4>
-            <p class="grey-text text-darken-3 lighten-3">
-                kitHubを使って、自分の作ったkitアプリケーションやkit用テーマファイルをアップロードまたは人気のkitアプリケーションやテーマをダウンロードしましょう。
-            </p>
-            <a href="" class="waves-effect waves-dark m-0 p-0">
-                <img src="https://mtsgi.github.io/kit/documents/banner-canary.png" alt="" class="">
-            </a>
+        <div class="parallax-container white-text">
+            <div class="parallax"><img src="http://web.kitit.ml/bg.jpg"></div>
+
+            <h4 class="emoji p-l copy">
+                kit your apps.
+            </h4>
+
+            <div class="row container p emoji">
+                <p>
+                    :rocket: kitアプリケーションはHTMLと少しのJavaScriptの知識があればすぐに開発することができます。
+                </p>
+                <p>CSSを記述してアプリケーションのスタイルを調整することも可能ですが、kitのスタイルフレームワークであるkitstrapを使用するともっと簡単にアプリケーションのスタイルやレイアウトを組み立てることができます。</p>
+                <p>
+                    kitアプリの開発をしやすくする開発者のためのフレームワーク、kit apps frameworkを使用することもできます。kafを使うことで、JavaScriptコーディングの量を劇的に少なく、あるいはまったくなくすことができます。
+                </p>
+            </div>
         </div>
-    </div>
+
+        <div class="section white z-depth-4">
+            <div class="row container">
+                <h4 class="header copy">kitHub</h4>
+                <p class="grey-text text-darken-3 lighten-3">
+                    kitHubを使って、自分の作ったkitアプリケーションやkit用テーマファイルをアップロードまたは人気のkitアプリケーションやテーマをダウンロードしましょう。
+                </p>
+                <a href="" class="waves-effect waves-dark m-0 p-0">
+                    <img src="https://mtsgi.github.io/kit/documents/banner-canary.png" alt="" class="">
+                </a>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
