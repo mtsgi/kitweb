@@ -5,19 +5,23 @@ body {
 main {
     transition: .5s all ease;
     opacity: .3;
+    line-height: 2;
 }
 
 nav {
     background: #ffffff;
     overflow: hidden;
-    height: 64px !important;
+    height: 84px !important;
 }
 
 .brand-logo img {
+    margin-top: 10px;
     max-height: 64px;
 }
 
 .copy {
+    font-size: 32px;
+    font-weight: 400;
     font-family: 'DM Sans', sans-serif;
 }
 
@@ -29,6 +33,7 @@ nav {
 .parallax-container > a {
     color: #ffffff;
     display: block;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .5), 0 0 1px rgba(0, 0, 0, .8);
 }
 
 .parallax-container > a:hover {
