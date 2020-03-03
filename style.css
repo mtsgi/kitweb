@@ -48,3 +48,16 @@
     left: calc(50% - 32px);
     top: calc(50% - 32px);
 }
+
+.appbar-logo {
+    margin-top: 30px;
+    max-height: 100px;
+    max-width: calc(100% - 140px);
+    object-fit: scale-down;
+    height: 90%;
+    transition: .3s all ease;
+}
+
+.v-app-bar--is-scrolled .appbar-logo {
+    margin-top: 5px;
+}
