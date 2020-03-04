@@ -1,24 +1,26 @@
-body {
+.v-application {
+    font-family: 'Noto Sans JP', sans-serif !important;
+    color: #3d3d3d !important;
     font-size: 16px;
 }
 
-main {
-    transition: .5s all ease;
-    opacity: .3;
-}
-
-nav {
-    background: #ffffff;
-    overflow: hidden;
-    height: 64px !important;
-}
-
-.brand-logo img {
-    max-height: 64px;
-}
-
 .copy {
-    font-family: 'DM Sans', sans-serif;
+    font-size: 42px;
+    font-weight: 400;
+    font-family: 'DM Sans', sans-serif !important;
+}
+
+.v-navigation-drawer__content a {
+    text-decoration: none;
+}
+
+.v-parallax__content {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .5);
+}
+
+.v-parallax__content h1 {
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .2);
+    border: none;
 }
 
 .parallax-container {
@@ -29,6 +31,7 @@ nav {
 .parallax-container > a {
     color: #ffffff;
     display: block;
+    text-shadow: 0 0 6px rgba(0, 0, 0, .5), 0 0 1px rgba(0, 0, 0, .8);
 }
 
 .parallax-container > a:hover {
@@ -44,4 +47,17 @@ nav {
     position: fixed;
     left: calc(50% - 32px);
     top: calc(50% - 32px);
+}
+
+.appbar-logo {
+    margin-top: 30px;
+    max-height: 100px;
+    max-width: calc(100% - 140px);
+    object-fit: scale-down;
+    height: 90%;
+    transition: .3s all ease;
+}
+
+.v-app-bar--is-scrolled .appbar-logo {
+    margin-top: 5px;
 }

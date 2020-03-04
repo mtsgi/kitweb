@@ -2,170 +2,354 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/emoji-toolkit@5.0.5/lib/js/joypixels.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-toolkit@5.0.5/extras/css/joypixels.min.css" />
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
-        integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap.css">
-    <link rel="stylesheet" href="https://mtsgi.github.io/kitstrap/d/kitstrap-font.css">
-    <link href="https://fonts.googleapis.com/css?family=DM+Sans:500&display=swap" rel="stylesheet"> 
-    <title>kit公式Webサイト</title>
-    <meta name="description" content="kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。">
-    <meta name="twitter:card" content="summary">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="http://kitit.ml/">
-    <meta property="og:title" content="kit Desktop System">
-    <meta property="og:description" content="kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。">
-    <meta property="og:image" content="http://web.kitit.ml/icon.png">
-    <meta property="og:site_name" content="kit Desktop System">
-    <meta property="og:locale" content="ja_JP">
-    <script src="https://code.jquery.com/jquery-3.3.1.js"
-        integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
-    <link rel="shortcut icon" href="favicon.ico">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/@mdi/font@4.x/css/materialdesignicons.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/emoji-toolkit@5.0.5/lib/js/joypixels.min.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/emoji-toolkit@5.0.5/extras/css/joypixels.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mtsgi/kitstrap/d/0.4/kitstrap.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mtsgi/kitstrap/d/0.4/kitstrap-font.css">
+  <link href="https://fonts.googleapis.com/css?family=DM+Sans:500&display=swap" rel="stylesheet">
+  <title>kit公式Webサイト</title>
+  <meta name="description" content="kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。">
+  <meta name="twitter:card" content="summary">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="http://kitit.ml/">
+  <meta property="og:title" content="kit Desktop System">
+  <meta property="og:description" content="kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。">
+  <meta property="og:image" content="http://web.kitit.ml/icon.png">
+  <meta property="og:site_name" content="kit Desktop System">
+  <meta property="og:locale" content="ja_JP">
+  <script src="script.js"></script>
+  <link rel="stylesheet" href="./style.css">
+  <link rel="shortcut icon" href="favicon.ico">
 </head>
 
-<body class="center-align">
+<body>
+  <div id="app">
+    <v-app id="inspire">
+      <v-navigation-drawer
+        app
+        v-model="drawer"
+        floating
+        dark
+        width="350"
+        src="https://cdn.vuetifyjs.com/images/backgrounds/bg-2.jpg"
+        mobile-break-point="50000"
+      >
+        <v-list-item>
+          <v-list-item-content>
+            <v-list-item-title class="copy">
+              kit
+            </v-list-item-title>
+            <v-list-item-subtitle>
+              desktop system
+            </v-list-item-subtitle>
+          </v-list-item-content>
+        </v-list-item>
+
+        <v-divider></v-divider>
+
+        <v-list rounded>
+          <a href="https://mtsgi.github.io/kit/" target="_blank" rel="noopener noreferrer" class="copy">
+            <v-list-item link>
+              <v-list-item-action>
+                <v-icon>mdi-desktop-mac</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>Experience kit Canary</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </a>
+          <a href="https://mtsgi.github.io/kitdocs/" target="_blank" rel="noopener noreferrer" class="copy">
+            <v-list-item link>
+              <v-list-item-action>
+                <v-icon>mdi-file-document</v-icon>
+              </v-list-item-action>
+              <v-list-item-content>
+                <v-list-item-title>View kit Documentation</v-list-item-title>
+              </v-list-item-content>
+            </v-list-item>
+          </a>
+        </v-list>
+      </v-navigation-drawer>
+
+      <v-app-bar fixed color="#ffffff" shrink-on-scroll prominent src="https://picsum.photos/1920/1080?random"
+        fade-img-on-scroll>
+        <template v-slot:img="{ props }">
+          <v-img v-bind="props" gradient="to top right, rgba(200,200,200,.7), rgba(255,255,255,.7)"></v-img>
+        </template>
+
+        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
+
+        <img src="./logo.png" class="appbar-logo" />
+
+        <v-spacer></v-spacer>
+
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <a href="https://mtsgi.github.io/kitdocs" target="_blank" rel="noopener noreferrer">
+              <v-btn icon v-on="on">
+                  <v-icon>mdi-file-document</v-icon>
+              </v-btn>
+            </a>
+          </template>
+          <span>ドキュメント</span>
+        </v-tooltip>
+
+        <v-tooltip bottom>
+          <template v-slot:activator="{ on }">
+            <a href="https://github.com/mtsgi/kit" target="_blank" rel="noopener noreferrer">
+              <v-btn icon v-on="on">
+                <v-icon>fab fa-github</v-icon>
+              </v-btn>
+            </a>
+          </template>
+          <span>GitHub</span>
+        </v-tooltip>
+
+        <template v-slot:extension>
+          <v-tabs align-with-title v-model="tab">
+            <v-tab
+              v-for="t in tabs"
+              :key="t.name"
+            >
+              {{ t.label }}
+            </v-tab>
+          </v-tabs>
+          <v-tabs-items>
+            <v-tab-item id="tab-about">Hello</v-tab-item>
+            <v-tab-item>Hello</v-tab-item>
+          </v-tabs-items>
+        </template>
+      </v-app-bar>
+
+      <v-tabs-items v-model="tab">
+        <v-tab-item>
+          <v-content id="scrolling-techniques-3">
+            <v-container style="height: 180px;"></v-container>
     
-    <div class="preloader-wrapper big active">
-        <div class="spinner-layer spinner-blue">
-            <div class="circle-clipper left">
-            <div class="circle"></div>
-            </div><div class="gap-patch">
-            <div class="circle"></div>
-            </div><div class="circle-clipper right">
-            <div class="circle"></div>
-            </div>
-        </div>
+            <v-parallax dark src="./11.jpg" gradient="to top right, rgba(0,0,0,.7), rgba(255,255,255,.7)">
+              <v-row align="center" justify="center">
+                <v-col class="text-center" cols="12">
+                  <h1 class="copy mb-4">kit your desktop.</h1>
+                  <p class="mb-4">kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。</p>
+                  <a href="https://mtsgi.github.io/kit" target="_blank" rel="noopener noreferrer">
+                    <v-btn large color="primary" class="mr-4 mt-4">
+                      今すぐkitを体験する
+                      <v-icon right dark>mdi-open-in-new</v-icon>
+                    </v-btn>
+                  </a>
+                  <a href="https://github.com/mtsgi/kit/releases" target="_blank" rel="noopener noreferrer">
+                    <v-btn large outlined color="white" class="mr-4 mt-4">
+                      リリース一覧を見る
+                      <v-icon right dark>fab fa-github</v-icon>
+                    </v-btn>
+                  </a>
+                </v-col>
+              </v-row>
+            </v-parallax>
+    
+            <v-card class="ma-12 pb-10 elevation-12" color="blue darken-2" dark>
+              <v-img class="white--text align-end" height="200px" src="https://mtsgi.github.io/kitdocs/images/desktop.png">
+                <v-card-title class="copy">why kit?</v-card-title>
+              </v-img>
+              <v-row align="center" justify="center">
+                <v-col class="text-center" cols="12">
+                  <p class="mb-4 px-8 kit-line-l">kitは軽量で、使いやすいウィンドウシステムとWeb技術ベースのアプリ開発を非常に簡単にするアプリケーションフレームワークを提供することを目的としたデスクトップ環境です。
+                  </p>
+                  <p>
+                    <a href="https://mtsgi.github.io/kitdocs/#/START" target="_blank" rel="noopener noreferrer">
+                      <v-btn x-large light color="white" class="mt-4">
+                        はじめてのkit - 導入方法
+                        <v-icon right dark>mdi-open-in-new</v-icon>
+                      </v-btn>
+                    </a>
+                  </p>
+                  <a href="https://mtsgi.github.io/kitdocs/#/HOW" target="_blank" rel="noopener noreferrer">
+                    <v-btn large outlined color="white" class="mt-4">
+                      kitアプリの仕組みを知る
+                      <v-icon right dark>mdi-open-in-new</v-icon>
+                    </v-btn>
+                  </a>
+                </v-col>
+              </v-row>
+            </v-card>
+    
+            <v-card class="ma-12 pb-10 elevation-12" color="blue darken-2" dark>
+              <v-img class="white--text align-end" height="200px" src="./images/bg3.png">
+                <v-card-title class="copy">kit your apps!</v-card-title>
+              </v-img>
+              <v-row align="center" justify="center">
+                <v-col class="text-center" cols="12">
+                  <p class="mb-4 px-8 kit-line-l">すべてのkitアプリケーションは、HTML構造とJavaScript(kit apps
+                    frameworkを含む)を用いて記述されていて、kitシステムから呼び出されるとAjaxでロードされます。</p>
+                  <p>
+                    <v-dialog v-model="kityourapps" width="500">
+                      <template v-slot:activator="{ on }">
+                        <v-btn x-large light color="white" class="mt-4" v-on="on">
+                          もっと詳しく知る
+                          <v-icon right dark>mdi-information</v-icon>
+                        </v-btn>
+                      </template>
+    
+                      <v-card class="pt-4">
+                        <v-card-text>
+                          kitアプリケーションはHTMLと少しのJavaScriptの知識があればすぐに開発することができます。
+                        </v-card-text>
+                        <v-card-text>
+                          CSSを記述してアプリケーションのスタイルを調整することも可能ですが、kitのスタイルフレームワークであるkitstrapを使用するともっと簡単にアプリケーションのスタイルやレイアウトを組み立てることができます。
+                        </v-card-text>
+                        <v-card-text>
+                          kitアプリの開発をしやすくする開発者のためのフレームワーク、kit apps
+                          frameworkを使用することもできます。kafを使うことで、JavaScriptコーディングの量を劇的に少なく、あるいはまったくなくすことができます。
+                        </v-card-text>
+    
+                        <v-divider></v-divider>
+    
+                        <v-card-actions>
+                          <v-spacer></v-spacer>
+                          <v-btn color="primary" text @click="kityourapps = false">
+                            閉じる
+                          </v-btn>
+                        </v-card-actions>
+                      </v-card>
+                    </v-dialog>
+                  </p>
+                  <a href="https://mtsgi.github.io/kitdocs/#/FIRSTAPP" target="_blank" rel="noopener noreferrer">
+                    <v-btn large outlined color="white" class="mt-4">
+                      kitチュートリアル - はじめてのkitアプリ開発
+                      <v-icon right dark>mdi-open-in-new</v-icon>
+                    </v-btn>
+                  </a>
+                </v-col>
+              </v-row>
+            </v-card>
+          </v-content>
+        </v-tab-item>
+        
+        <v-tab-item>
+          <v-container style="height: 180px;"></v-container>
+              
+          <v-parallax dark src="./bg.jpg" gradient="to top right, rgba(0,0,0,.7), rgba(255,255,255,.7)">
+            <v-row align="center" justify="center">
+              <v-col class="text-center" cols="12">
+                <h1 class="copy mb-4">kit your environment.</h1>
+                <p class="mb-4">kitのエコシステムでkitアプリの開発や配信をさらに簡単にします。</p>
+                <v-dialog v-model="platform" width="500">
+                  <template v-slot:activator="{ on }">
+                    <v-btn large color="primary" class="mr-4 mt-4" v-on="on">
+                      kitアプリの配信について
+                      <v-icon right dark>mdi-information</v-icon>
+                    </v-btn>
+                  </template>
 
-        <div class="spinner-layer spinner-red">
-            <div class="circle-clipper left">
-            <div class="circle"></div>
-            </div><div class="gap-patch">
-            <div class="circle"></div>
-            </div><div class="circle-clipper right">
-            <div class="circle"></div>
-            </div>
-        </div>
+                  <v-card class="pt-4">
+                    <v-card-text>
+                      kafやkitstrapを使用してkitアプリを作成したら、サーバー上にホスティングされたkitアプリケーションのディレクトリをアプリとしてkptプラットフォームを使用して配信することができます。
+                    </v-card-text>
+                    <v-card-text>
+                      kptで配信されたアプリケーションは、kishのkptコマンドから簡単にインストールすることができ、kptのAPIを通してバージョン管理を行うことができます。
+                    </v-card-text>
 
-        <div class="spinner-layer spinner-yellow">
-            <div class="circle-clipper left">
-            <div class="circle"></div>
-            </div><div class="gap-patch">
-            <div class="circle"></div>
-            </div><div class="circle-clipper right">
-            <div class="circle"></div>
-            </div>
-        </div>
+                    <v-divider></v-divider>
 
-        <div class="spinner-layer spinner-green">
-            <div class="circle-clipper left">
-            <div class="circle"></div>
-            </div><div class="gap-patch">
-            <div class="circle"></div>
-            </div><div class="circle-clipper right">
-            <div class="circle"></div>
-            </div>
-        </div>
-    </div>
+                    <v-card-actions>
+                      <v-spacer></v-spacer>
+                      <v-btn color="primary" text @click="platform = false">
+                        閉じる
+                      </v-btn>
+                    </v-card-actions>
+                  </v-card>
+                </v-dialog>
+              </v-col>
+            </v-row>
+          </v-parallax>
 
-    <nav>
-        <div class="nav-wrapper">
-            <a href="#" class="brand-logo center">
-                <img src="./logo.png" alt="">
-            </a>
-            <ul class="right">
-                <li>
-                    <a class="black-text" href="https://github.com/mtsgi/kit"><i class="fab fa-github"></i></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+          <v-container class="m-b-l">
+            <v-row no-gutters>
+              <v-col
+                v-for="t in tools"
+                :key="t.name"
+                cols="12"
+                sm="6"
+              >
+                <v-card class="ma-12 pb-4 elevation-12" dark outlined>
+                  <v-img class="white--text align-end" height="200px" :src="t.image" position="top" gradient="rgba(0, 0, 0, 0), rgba(0, 0, 0, .1)">
+                    <v-card-title class="copy">{{ t.name }}</v-card-title>
+                  </v-img>
+                  <p class="mb-4 px-8 kit-line-l m-t-l">{{ t.desc }}</p>
+                  <p class="kit-text-c">
+                    <a :href="t.url" target="_blank" rel="noopener noreferrer">
+                      <v-btn x-large outlined color="white" class="mt-4">
+                        詳細を見る
+                        <v-icon right dark>mdi-open-in-new</v-icon>
+                      </v-btn>
+                    </a>
+                  </p>
+                </v-card>
+              </v-col>
+            </v-row>
+          </v-container>
+        </v-tab-item>
+      </v-tabs-items>
 
-    <main>
-        <div class="parallax-container white-text">
-            <div class="parallax"><img src="11.jpg"></div>
-            <h4 class="emoji p-l copy">
-                kit your desktop.
-            </h4>
-            <div class="row container p emoji">
-                :desktop: kitDesktopはインストール不要でJavaScript上で完全に動作するオープンソースのデスクトップ環境です。
-            </div>
-            <a href="" class="section waves-effect waves-dark emoji">
-                :package: kitのリリースをダウンロード
-            </a>
-            <a href="" class="section waves-effect waves-dark emoji">
-                :notebook_with_decorative_cover: 開発ブログから最新情報を知る
-            </a>
-            <a href="" class="section waves-effect waves-dark emoji">
-                :gem: Canaryを体験する
-            </a>
-        </div>
 
-        <div class="section white z-depth-4">
-            <div class="row container">
-                <h4 class="headezr copy">About kit</h4>
-                <p>
-                    kitはWeb技術を使った軽量で使いやすいデスクトップ(ウィンドウシステム)とアプリの開発を非常に簡単にするアプリケーションフレームワークを提供することを目的としたデスクトップ環境です。
-                </p>
-                <p>
-                    すべてのkitアプリケーションはHTML構造にJavaScript、それとJavaScriptを用いたkit apps
-                    frameworkを用いて記述されていて、呼び出されるとAjaxでロードされます。サーバーサイド技術は用いられていません。
-                </p>
-                <a href="" class="btn-flat waves-effect waves-dark kit-font-l blue-text emoji">
-                    :gem: 今すぐkitを体験する
-                </a>
-            </div>
-            <div class="row container kit-text-c p-xl">
-                <img class="materialboxed" data-caption="kitは今までにない軽量デスクトップ環境を提供します。" width="auto" src="https://mtsgi.github.io/kitdocs/images/desktop.png">
-            </div>
-            <div class="row container">
-                <h4 class="header copy">documentation</h4>
-                <p class="grey-text text-darken-3 lighten-3">
-                    kitドキュメントには、すべてのkitユーザーのための情報があります。kitチュートリアルは、kitアプリを開発しない人が読んでも参考になるでしょう。
-                </p>
-                <a href="" class="btn-flat waves-effect waves-dark kit-font-l blue-text emoji">
-                    :page_facing_up: kitドキュメントを見る
-                </a>
-            </div>
-        </div>
-
-        <div class="parallax-container white-text">
-            <div class="parallax"><img src="http://web.kitit.ml/bg.jpg"></div>
-
-            <h4 class="emoji p-l copy">
-                kit your apps.
-            </h4>
-
-            <div class="row container p emoji">
-                <p>
-                    :rocket: kitアプリケーションはHTMLと少しのJavaScriptの知識があればすぐに開発することができます。
-                </p>
-                <p>CSSを記述してアプリケーションのスタイルを調整することも可能ですが、kitのスタイルフレームワークであるkitstrapを使用するともっと簡単にアプリケーションのスタイルやレイアウトを組み立てることができます。</p>
-                <p>
-                    kitアプリの開発をしやすくする開発者のためのフレームワーク、kit apps frameworkを使用することもできます。kafを使うことで、JavaScriptコーディングの量を劇的に少なく、あるいはまったくなくすことができます。
-                </p>
-            </div>
-        </div>
-
-        <div class="section white z-depth-4">
-            <div class="row container">
-                <h4 class="header copy">kitHub</h4>
-                <p class="grey-text text-darken-3 lighten-3">
-                    kitHubを使って、自分の作ったkitアプリケーションやkit用テーマファイルをアップロードまたは人気のkitアプリケーションやテーマをダウンロードしましょう。
-                </p>
-                <a href="" class="waves-effect waves-dark m-0 p-0">
-                    <img src="https://mtsgi.github.io/kit/documents/banner-canary.png" alt="" class="">
-                </a>
-            </div>
-        </div>
-    </main>
+      <v-footer color="blue-grey" absolute app>
+        <span class="white--text">kit desktop system - mtsgi/kit</span>
+      </v-footer>
+    </v-app>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/vue@2.x/dist/vue.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/vuetify@2.x/dist/vuetify.js"></script>
+  <script>
+    new Vue( {
+      el: '#app',
+      vuetify: new Vuetify(),
+      data: () => ( {
+        drawer: false,
+        drawerRight: false,
+        right: false,
+        left: false,
+        tab: '',
+        tabs: [{
+          name: 'about',
+          label: 'kitについて'
+        }, {
+          name: 'ecosystem',
+          label: 'kitエコシステム'
+        }],
+        tools: [{
+          name: 'kish',
+          desc: 'kishは、kitDesktopのためのkit標準の強力なシェルスクリプトです',
+          image: 'https://mtsgi.github.io/bg/kish.png',
+          url: 'https://github.com/mtsgi/kish'
+        },{
+          name: 'kitstrap',
+          desc: 'kitstrapはkitのデザイン言語に基づいた軽量なCSSフレームワークです',
+          image: 'https://mtsgi.github.io/bg/kitstrap.png',
+          url: 'https://github.com/mtsgi/kitstrap'
+        },{
+          name: 'kpt',
+          desc: 'kptはkitアプリパッケージのバージョン管理・配信プラットフォームです',
+          image: 'https://mtsgi.github.io/bg/kpt.png',
+          url: 'https://github.com/mtsgi/kpt'
+        },{
+          name: 'kaf',
+          desc: 'kafはkitアプリ開発に特化したアプリケーションフレームワークです',
+          image: 'https://mtsgi.github.io/bg/kish.png',
+          url: 'https://mtsgi.github.io/kitdocs/#/kaf'
+        }],
+        kityourapps: false,
+        platform: false
+      } ),
+    } )
+  </script>
 </body>
 
 </html>
